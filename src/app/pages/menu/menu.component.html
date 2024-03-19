@@ -6,7 +6,7 @@
 <ul>
   @for (apt of menuSig().appetizers; track apt.id) {
     <li>
-      <a [routerLink]="['/menudetails', apt.id]">{{apt.title}}</a>
+      <a [routerLink]="['/menudetails', apt.id]" [queryParams]="{ type: 'appetizers'}">{{apt.title}}</a>
     </li>
   }
 </ul>
@@ -16,7 +16,7 @@
   <ul>
     @for (dsh of menuSig().dishes; track dsh.id) {
       <li>
-        <a [routerLink]="['/menudetails', dsh.id]">{{dsh.title}}</a>
+        <a [routerLink]="['/menudetails', dsh.id]" [queryParams]="{ type: 'dishes'}">{{dsh.title}}</a>
       </li>
     }
   </ul>
@@ -27,7 +27,7 @@
   <ul>
     @for (des of menuSig().desserts; track des.id) {
       <li>
-        <a [routerLink]="['/menudetails', des.id]">{{des.title}}</a>
+        <a [routerLink]="['/menudetails', des.id]" [queryParams]="{ type: 'desserts'}">{{des.title}}</a>
       </li>
     }
   </ul>
