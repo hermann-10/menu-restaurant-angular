@@ -1,1 +1,2 @@
-<p>menudetails works!</p>
+<h1>{{ menuItemSig().title }}</h1>
+<p>Prix: {{ menuItemSig().price | currency: 'CHF' : "symbol": undefined : "fr" }}</p>
