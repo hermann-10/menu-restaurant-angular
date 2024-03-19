@@ -1,0 +1,25 @@
+<h1>Nous contacter</h1>
+
+<p>contact works!</p>
+
+<div class="option">
+  <h3>Adress</h3>
+  <div>Rue imaginaire 1200 Genève</div>
+</div>
+<div class="option">
+  <h3>Téléphone</h3>
+  <div>Tél: 022 100 24 12</div>
+</div>
+<div class="option">
+  <h3>Email</h3>
+  <div>info&#64;test.com</div>
+</div>
+<div class="option">
+  Tous les mois, une soirée à chez Déméter
+  <h3>Email</h3>
+  <div>
+    <a routerLink="/soirees" [queryParams]="{ town: 'Genève'}">Genève</a>
+    <br>
+    <a routerLink="/soirees" [queryParams]="{ town: 'Lausanne'}">Lausanne</a>
+  </div>
+</div>
