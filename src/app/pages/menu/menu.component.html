@@ -1,3 +1,35 @@
 <h1>Consulter notre menu</h1>
 <p>menu works!</p>
-{{ menuSig() | json}}
+<!-- {{ menuSig() | json}} -->
+
+<h2>Entrées</h2>
+<ul>
+  @for (apt of menuSig().appetizers; track apt.id) {
+    <li>
+      <a [routerLink]="['/menudetails', apt.id]">{{apt.title}}</a>
+    </li>
+  }
+</ul>
+
+<h2>Plats</h2>
+<div>
+  <ul>
+    @for (dsh of menuSig().dishes; track dsh.id) {
+      <li>
+        <a [routerLink]="['/menudetails', dsh.id]">{{dsh.title}}</a>
+      </li>
+    }
+  </ul>
+</div>
+
+<h2>Desserts</h2>
+<div>
+  <ul>
+    @for (des of menuSig().desserts; track des.id) {
+      <li>
+        <a [routerLink]="['/menudetails', des.id]">{{des.title}}</a>
+      </li>
+    }
+  </ul>
+</div>
+
